@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dolci</title>
+
+<style>
+/* ----- GENERALE ----- */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5d6b0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ----- HEADER ----- */
+header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 60px 10px;
+    background-color: #a76f3f;
+    border-bottom: 2px solid #d8c6b7;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+    font-family: "Times New Roman", serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+}
+
+header a.active {
+    border-bottom: 3px solid #fff;
+}
+
+/* Menu a tendina */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;  
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border: 1px solid #ccc;     
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+    display: block;
+    color: #333333;              
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    font-family: "Times New Roman", serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ----- GALLERIA CON OVERLAY ----- */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e0d7cc;
+    flex-shrink: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay trasparente leggermente più trasparente */
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,248,240,0.1); /* più trasparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Titolo sempre visibile */
+.card .overlay .title {
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(138,88,23,0.9); 
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Pulsante YouTube invertito: sfondo bianco, testo marrone */
+.card .overlay .video-link a {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #8a5817;
+    font-family: "Times New Roman", serif;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card .overlay .video-link a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ----- BLOCCO INFORMATIVO ----- */
+.info-text {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff8f0;
+    border: 1px solid #e0d7cc;
+    border-radius: 4px;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-text .title {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8a5817;
+    margin-bottom: 15px;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #a76f3f;
+    color: #ffffff;
+    font-size: 16px;
+    border-top: 1px solid #d8c6b7;
+    margin-top: auto;
+}
+
+@media(max-width: 980px) {
+    .gallery {
+        justify-content: center;
+    }
+    .card {
+        width: 90%;
+        height: 300px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">Su di noi</a>
+
+    <div class="dropdown">
+        <a href="#" class="active">Ricettario</a>
+        <div class="dropdown-content">
+            <a href="antipasti.html">Antipasti</a>
+            <a href="primi.html">Primi</a>
+            <a href="secondi.html">Secondi</a>
+            <a href="dolci.html" class="active">Dolci</a>
+        </div>
+    </div>
+</header>
+
+<div class="gallery">
+
+    <div class="card">
+        <img src="img/BA406212-38AE-4EA0-B4D5-591514C21C2D.avif" alt="Tiramisù">
+        <div class="overlay">
+            <div class="title">Tiramisù</div>
+            <div class="video-link">
+                <a href="https://www.chiarasbakery.it/ricetta-tiramisu-quello-originale/" target="_blank">Clicca qui per link a Chiara's Bakery</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/cheesecake.jpg" alt="Cheesecake">
+        <div class="overlay">
+            <div class="title">Cheesecake</div>
+            <div class="video-link">
+                <a href="https://ricette.giallozafferano.it/Cheesecake-fredda.html" target="_blank">Clicca qui per link a GialloZafferano</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/pannacotta alle albicocche.jpg" alt="Panna cotta">
+        <div class="overlay">
+            <div class="title">Panna cotta alle albicocche</div>
+            <div class="video-link">
+                <a href="https://www.cucinabotanica.com/ricette/panna-cotta-alle-albicocche/" target="_blank">Clicca qui per link a Cucina Botanica</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="info-text">
+    <div class="title">COME SERVIRE I DOLCI A TAVOLA</div>
+    I dolci vanno serviti alla fine del pasto, ben presentati e possibilmente freschi. 
+    Possono essere accompagnati da frutta fresca, gelato o salse leggere. 
+    Cura la disposizione dei dolci per valorizzare colori, consistenze e sapori, rendendo 
+    il momento finale del pasto speciale e invitante.
+</div>
+
+<footer>
+    &copy; 2025 Esempio sito per ricette. Tutti i diritti riservati.
+</footer>
+
+</body>
+</html>

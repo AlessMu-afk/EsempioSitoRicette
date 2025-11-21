@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Su di noi</title>
+
+<style>
+
+/* ----- GENERALE ----- */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5d6b0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ----- HEADER ----- */
+header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 60px 10px;
+    background-color: #a76f3f;
+    border-bottom: 2px solid #d8c6b7;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+    font-family: "Times New Roman", serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Sottolinea pagina attiva */
+header a.active {
+    border-bottom: 3px solid #fff;
+}
+
+/* Menu a tendina */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;  /* bianco */
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border: 1px solid #ccc;     /* bordo grigio chiaro */
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* leggero ombreggiamento */
+}
+
+.dropdown-content a {
+    display: block;
+    color: #a76f3f;              /* testo scuro */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    font-family: "Times New Roman", serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;   /* grigio chiaro al passaggio del mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* ----- GALLERIA ORIZZONTALE ----- */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.gallery img {
+    width: 33.33%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #e0d7cc;
+}
+
+/* ----- SEZIONE TESTI ----- */
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    gap: 35px;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.info-box {
+    width: 30%;
+    min-width: 260px;
+    background-color: #fff8f0;
+    padding: 30px 20px;
+    border: 1px solid #e0d7cc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Titoli */
+.info-box .title {
+    font-family: "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8a5817;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Paragrafi */
+.small {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #a76f3f;
+    color: #ffffff;
+    font-size: 16px;
+    border-top: 1px solid #d8c6b7;
+    margin-top: auto;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="active">Su di noi</a>
+
+    <div class="dropdown">
+        <a href="#">Ricettario</a>
+        <div class="dropdown-content">
+            <a href="antipasti.html">Antipasti</a>
+            <a href="primi.html">Primi</a>
+            <a href="secondi.html">Secondi</a>
+            <a href="dolci.html">Dolci</a>
+        </div>
+    </div>
+</header>
+
+<div class="gallery">
+    <img src="img/Aperitivo-Osteria-Fratelli-Mori.jpg">
+    <img src="img/mangiare-con-amici.jpg">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80">
+</div>
+
+<div class="info">
+
+    <div class="info-row">
+        <div class="info-box">
+            <div class="title">Chi siamo</div>
+            <div class="small">
+                Una realtà dedicata alla cucina, che condivide ricette e momenti speciali,
+                trasformando ogni pasto in un’esperienza memorabile.
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="title">La nostra esperienza</div>
+            <div class="small">
+                Dal 2010 accompagniamo famiglie e appassionati, combinando tradizione e creatività,
+                per riscoprire il piacere di condividere momenti culinari.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2025 Esempio sito per ricette. Tutti i diritti riservati.
+</footer>
+
+</body>
+</html>
